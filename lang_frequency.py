@@ -1,8 +1,9 @@
 import os
 import argparse
+import re
 from collections import Counter
 
-MOST_COMMON_WORD_NUMB = 10
+MOST_COMMON_WORDS_NUMB = 5
 
 def load_data(filepath):
     if not os.path.isfile(filepath):
@@ -12,8 +13,8 @@ def load_data(filepath):
         return opened_text
         
 def get_most_frequent_words(opened_text):
-    separated_text = opened_text.lower().split() 
-    most_frequent_words = Counter(separated_text).most_common(MOST_COMMON_WORD_NUMB) 
+    separated_text = re.findall(r'\w+', opened_text.lower())
+    most_frequent_words = Counter(separated_text).most_common(MOST_COMMON_WORD_NUMBS) 
     print(most_frequent_words)
 
 
