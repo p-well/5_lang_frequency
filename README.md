@@ -17,7 +17,7 @@ python lang_frequency --path <filepath>
 Filepath should be like:  C:\projects\devman\5_lang_frequency\description.txt
 ```
 
-3-rd party module 'chardet' is used to detect file encoding
+3-rd party module 'chardet' is used to detect file encoding.
 Use ```pip install -r requirements.txt``` to install the module.  
 
 The quantity of the most frequent words is hardcoded into program in constant ```MOST_COMMON_WORDS_NUMB```
