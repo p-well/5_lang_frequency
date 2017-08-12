@@ -24,7 +24,6 @@ def get_most_frequent_words(opened_text):
     separated_text = re.findall(r'\w+', opened_text.lower())
     most_frequent_words = Counter(separated_text).most_common(MOST_COMMON_WORDS_NUMB) 
     return most_frequent_words
-    print(most_frequent_words)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
